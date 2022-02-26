@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	{% block head %}{% endblock %}
+	<title>ProjectRed</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+	<nav>
+	  <ul class="topmenu">
+		<li><a href="{{url_for('index')}}">Home</a></li>
+		<li><a href="">Shop</a></li>
+		<li><a href="" class="down">Registration</a>
+		  <ul class="submenu">
+			<li><a href="{{url_for('reg')}}" class="submen">Зарегестрироватся</a></li>
+			<li><a href="" class="submen">Войти</a></li>
+		  </ul>
+		</li>
+		<li><a href="" class="down">Discord</a>
+		  <ul class="submenu">
+			<li><a href="https://discord.gg/mkd24Fc7vp" target="_blank" class="submen">Наш дискорд сервер</a></li>
+			<li><a href="" class="submen">Привязать акаунт</a></li>
+		  </ul>
+		</li>
+		<li><a href="">Contact</a></li>
+	  </ul>
+	</nav>
+	{% block body %}{% endblock %}
+</body>
+</html>
